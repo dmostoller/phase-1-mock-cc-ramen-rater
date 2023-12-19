@@ -17,37 +17,39 @@ function renderRamen(ramenArray) {
         //console.log(ramenObj)
         //create img tags 
         const ramenImg = document.createElement('img')
-        let ramenImgUrl = ramenObj.image
-        ramenImg.src = ramenImgUrl
-        let ramenImgName = ramenObj.name
-        ramenImg.name = ramenImgName
+        ramenImg.src = ramenObj.image
+        //ramenImg.name = ramenObj.name
         //append to DOM
-        menuDiv.appendChild(ramenImg)        
+        menuDiv.appendChild(ramenImg) 
+        
+
+        // deliverable 2 -- put the click events inside the loop so each image has its own click event listener
+        ramenImg.addEventListener('click', handleClick)
+
+        function handleClick() {
+// console.log(ramenObj)
+//update name tag
+            const nameDisplay = document.querySelector('.name')
+            nameDisplay.textContent = ramenObj.name
+//         //update restaurant tag
+            const restaurantDisplay = document.querySelector('.restaurant')
+            restaurantDisplay.textContent = ramenObj.restaurant
+//         //update comment tag
+            const commentDisplay = document.querySelector('#comment-display')
+            commentDisplay.textContent = ramenObj.comment
+//         //upate rating tag
+            const ratingDisplay = document.querySelector('#rating-display')
+            ratingDisplay.textContent = ramenObj.rating
+//         //upate image tag
+            const imageDisplay = document.querySelector('.detail-image')
+            imageDisplay.src = ramenObj.image
+
+        }
+
+
     });
 }
 
-
-//create function to load ramen to main image after image being clicked on
-//eventlistener for onclick
-
-
-//function
-
-//figure out which was clicked
-    //const imageClicked = document.querySelector(``)
-    //imageClicked.addEventListener('click', loadRamenDetail)
-    //function loadRamenDetail(e) {
-//fetch the individual object for the image that was clicked
-        //console.log(imageClicked)}
-
-//get div for detail
-    //const detailDiv = document.querySelector("#ramen-detail")
-
-
-
-
-
-    
 //add new RAMEN from FORM SUBMIT - POST
 // get form
 
