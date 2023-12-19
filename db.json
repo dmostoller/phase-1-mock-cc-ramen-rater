@@ -39,6 +39,14 @@
       "image": "./assets/ramen/kojiro.jpg",
       "rating": 6,
       "comment": "Perfect for a cold night."
+    },
+    {
+      "name": "bird ramen",
+      "restaurant": "aviRamen",
+      "rating": "6",
+      "comment": "if you like birds",
+      "image": "https://www.all-birds.com/picPg/bluebird-M-827-pL.JPG",
+      "id": 6
     }
   ]
 }
